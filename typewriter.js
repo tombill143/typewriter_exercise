@@ -18,19 +18,20 @@ function print() {
 
     audio.play();
     audio2.play();
+
+    //the code below me plays a space sound when there the programme detects a space
     if (letters[i] === " ") {
-      const audio = document.getElementById("typespace");
       audio3.play();
     }
-
+    //the code below me plays a sound that stops the typewriter when the programme detects a full stop
     if (letters[i] === ".") {
-      const audio = document.getElementById("typespace");
       audio4.play();
       audio5.play();
     }
 
     i++;
 
+    //the code below just sets a delay when the characters appear one at a time on the page.
     setTimeout(print, Math.random() * 1000); // delay of 1 second
   }
 }
